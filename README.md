@@ -3,9 +3,9 @@
 
 [仓库地址](https://github.com/Invinc-Z/latex-diary-template)
 
-<div align=center><img src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250520180859884.png" alt="latex线圈日记本模板-1" style="zoom: 50%;" /></div>
+<div align=center><img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250520180859884.png" alt="latex线圈日记本模板-1" style="zoom: 50%;" /></div>
 
-<div align=center><img src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250328225631115.png" alt="latex线圈日记本模板-2" style="zoom: 50%;" /></div>
+<div align=center><img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250328225631115.png" alt="latex线圈日记本模板-2" style="zoom: 50%;" /></div>
 
 ---
 
@@ -32,7 +32,7 @@
 Windows便捷批处理文件：
 
 - `clean.bat` - 清理所有辅助文件；
--  `build.bat` - 重新编译目录中所有`.tex`并清理辅助文件。
+- `build.bat` - 重新编译目录中所有`.tex`并清理辅助文件。
 
 Linux快速编译：
 
