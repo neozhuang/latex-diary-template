@@ -9,18 +9,18 @@
 \EndAt[\getYear]{\getMonth}{\getDay} % 最后一次编译当天的日期 可不修改
 
 %指定主字体
-\setCJKmainfont{华文行楷}  
+%\setCJKmainfont{华文行楷}  
 % 设置无衬线字体（黑体替代）
-% \setCJKsansfont{SimHei}          % 黑体 \textsf{这是黑体（无衬线字体）} 
+\setCJKsansfont{SimHei}          % 黑体 \textsf{这是黑体（无衬线字体）} 
 % 设置等宽字体（楷体替代）
-% \setCJKmonofont{KaiTi}           % 楷体 \texttt{这是楷体（等宽字体）}
-\setmainfont{Times New Roman}
+\setCJKmonofont{KaiTi}           % 楷体 \texttt{这是楷体（等宽字体）}
+%\setmainfont{Times New Roman}
 
 \begin{document}
 \maketitle
 
 %===============================================================================%
-\Address[中国][北京]
+\Address[中国][南昌]
 \Date{2025}{1}{1}[\sun]%
 \verb|\|Date\verb|{}{}{}[]|前三个参数分别指定年月日， 第四个参数为天气或心情，要用中括号\verb|[]|, 默认值为\verb|\sunny|， 即打印多云图标，可在.cls中\verb|\def\diary@weather{}|修改默认值。如果省略\verb|[]|或\verb|[]|内不填内容，跟随前一天填写的图标。
 

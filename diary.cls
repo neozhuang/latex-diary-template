@@ -205,7 +205,7 @@
 \def\@author{}
 
 %\RequirePackage{xargs}
-\newcommandx{\Address}[2][1=江苏,2=南京,usedefault]{%
+\newcommandx{\Address}[2][1=江西,2=南昌,usedefault]{%
   \def\diary@province{#1}%
   \def\diary@city{#2}%
 }%
