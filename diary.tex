@@ -1,54 +1,40 @@
+% !TeX encoding = UTF-8
 % !TeX Program = xelatex
 \documentclass{diary}
-
 \title{日记模板 \\{\small Plain Life and Wonderful Moments}}
-\author{Invinc-Z}
+\author{Neozhuang}
 
-%指定起止日期
-\BeginAt[2025]{01}{01}   % 需手动指定年月日
-\EndAt[\getYear]{\getMonth}{\getDay} % 最后一次编译当天的日期 可不修改
+% 指定起止日期
+\BeginAt[2026][01][01]                  % 指定起始年月日
+\EndAt[\getYear][\getMonth][\getDay]    % 最后一次编译当天的日期 可不修改
 
-%指定主字体
-\setCJKmainfont{华文行楷}  
-% 设置无衬线字体（黑体替代）
-% \setCJKsansfont{SimHei}          % 黑体 \textsf{这是黑体（无衬线字体）} 
-% 设置等宽字体（楷体替代）
-% \setCJKmonofont{KaiTi}           % 楷体 \texttt{这是楷体（等宽字体）}
-\setmainfont{Times New Roman}
+% 标题页专用字体，如不设置则使用正文字体
+%\TitleCJKFont{Noto Sans CJK SC}         % 标题页中文字体
+%\TitleFont{Noto Sans}                   % 标题页英文字体
+
+% 正文字体，如不设置则使用系统默认字体
+\setCJKmainfont{Noto Serif CJK SC}      % 正文中文字体 
+\setmainfont{Noto Serif}                % 正文英文字体
 
 \begin{document}
 \maketitle
 
 %===============================================================================%
 \Address[中国][北京]
-\Date{2025}{1}{1}[\sun]%
-\verb|\|Date\verb|{}{}{}[]|前三个参数分别指定年月日， 第四个参数为天气或心情，要用中括号\verb|[]|, 默认值为\verb|\sunny|， 即打印多云图标，可在.cls中\verb|\def\diary@weather{}|修改默认值。如果省略\verb|[]|或\verb|[]|内不填内容，跟随前一天填写的图标。
+\Date{2026}{1}{1}[\faSun]%
+日记可以写的内容其实很丰富，不仅能记录今天做了什么，还可以写一天里遇到的人和事、去了哪些地方、发生了哪些有意思或印象深刻的小插曲；
+也可以写自己当时的心情和想法，比如开心、烦躁、委屈、期待、感动，或者对某件事的看法与感受；
+还可以写生活中的细节，例如天气、晚霞、路上的风景、一句好笑的话、一顿饭、一本书、一部电影带来的触动；
+如果想让日记更有意义，也可以加入反思和总结，写写今天哪些地方做得好、哪些地方没做好、为什么会拖延、以后想怎么改进；
+另外，日记也可以写愿望和计划，比如明天想完成什么、最近有什么目标、希望自己变成什么样。
 
-\verb|\|Date\verb|{}{}{}[]|后面必须要有\%，且命令与日记内容之间不能有空行，否则会引入不必要的空格和空行。
-
-\verb|\Address[][]|两个参数设置地址，默认值为江苏南京，可在.cls中将
-\verb|\newcommandx{\Address}[2][]{}|中的江苏和南京修改为其他省份城市。不带参数命令\verb|\Address|与\verb|\Address[][]|缺省两个参数显示效果相同。且可以缺省一个参数，\verb|\Address[][沭阳]|显示江苏沭阳。
-
-\verb|\setCJKmainfont{}| 设置为本机已有中文字体。
-
-\verb|\setmainfont{}| 设置文档中除中文字符以外的其他字符的字体。
-
-\verb|\Theme{}| 为每一天设定一个主题，格式为居中。
-
-星期几根据日期值自动计算。
+总的来说，日记既可以写事，也可以写心情，还可以写感受、思考、计划和生活里的小细节，
+只要是真实属于自己的内容，都可以写进日记里。
 
 %===============================================================================%
-\Address[][沭阳]
-\Date{2025}{2}{26}[]%
-\Theme{滕王阁序} \par
-豫章故郡，洪都新府。星分翼轸，地接衡庐。襟三江而带五湖，控蛮荆而引瓯越。物华天宝，龙光射牛斗之墟；人杰地灵，徐孺下陈蕃之榻。
-
-披绣闼，俯雕甍，山原旷其盈视，川泽纡其骇瞩。闾阎扑地，钟鸣鼎食之家；舸舰弥津，青雀黄龙之舳。云销雨霁，彩彻区明。落霞与孤鹜齐飞，秋水共长天一色。渔舟唱晚，响穷彭蠡之滨；雁阵惊寒，声断衡阳之浦。
-
-%===============================================================================%
-\Address[][]
-\Date{2025}{3}{28}[\winkSmile]%
-\Theme{今日小结} \par
+\Address[吴江][图书馆]
+\Date{2026}{2}{26}%
+\Theme{今日小结}
 专注时长：5 h  \par
 \quad \par
 今日完成：\par
@@ -61,19 +47,74 @@
 2. \par
 3. \par
 
+%===============================================================================%
+\Address[吴江][盛泽]
+\Date{2026}{3}{1}[\faHeartCrack]%
+人有时候会掉进自己的情绪里，像掉进一口很深的井。你在井底喊，听到的只有回声；你伸手去抓，抓到的只有冰冷的井壁。
+可你要知道，再深的井，也有井口。你现在感受到的压抑、疼痛、无力，都是真的，但它们不是永恒的。
+没有哪一种黑夜能永久覆盖一个人，也没有哪一种痛苦会永远保持同样的强度。
+你现在最重要的，不是逼自己立刻变得强大，而是先不要放弃今天，先把今天熬过去，再把明天接住。
+很多时候，人不是靠一瞬间顿悟走出来的，而是靠一天一天没放弃，慢慢活出来的。
+
+也许你现在觉得自己什么都没有，未来没有方向，过去一团糟，今天也过得不体面。
+可人生从来不是因为某一天特别完美，才开始变好的。
+人生真正的转折，往往出现在那些看起来最灰暗、最不起眼、最不像希望的日子里。
+也许就是某一天，你照常起床，照常难受，照常觉得自己没什么变化，
+可你突然发现，昨天让你崩溃的事，今天已经没那么疼了；
+以前让你害怕的路，今天你已经能往前多走几步了。
+人就是这样一点点从废墟里把自己捡回来的。
+
+%===============================================================================%
+\Address
+\Date{2026}{3}{2}[\faCloudRain]%
+别总觉得自己来不及了。很多人都会在某个阶段觉得，别人已经走出去很远了，而自己还困在原地，像是被生活落下的人。
+可每个人的花期都不一样，每个人的路也不一样。
+有人很早发光，有人很晚才找到自己；有人走得快，有人走得慢，但慢不是错，晚也不是输。
+只要你还没有放弃自己，你的人生就远远没有定局。
+你现在吃的苦、受的伤、熬的夜，也许不会立刻变成勋章，
+但它们会一点点长成你的骨头，让你以后站得更稳。
+
+你要记住，真正能救你的人，很多时候不是突然出现的谁，也不是某一句立刻让你开悟的话，
+而是那个虽然反反复复崩溃，却始终没彻底放弃自己的你。
+那个会在深夜流泪、会怀疑人生、会痛恨自己不够好的你，
+其实也一直在咬着牙保护你、支撑你、把你拖过一个又一个难熬的时刻。
+别轻易否定自己。你能活到今天，已经说明你比自己想象中更能扛。
+
+%===============================================================================%
+\Address[][家]
+\Date{2026}{3}{29}[\faCloudSun]%
+图标使用fontawesome7图标库，可选样式（solid或regular），默认是 solid。
+图标命令可终端输入texdoc fontawesome7查看文档，或查看fontawesome官网。
+一些常用icon指令如下:
+
+\faSun\quad\makebox[5cm][l]{\texttt{\string\faSun}}\quad 晴天太阳
+
+\faSun[regular]\quad\makebox[5cm][l]{\texttt{\string\faSun[regular]}}\quad 晴天太阳
+
+\faCloudSun\quad\makebox[5cm][l]{\texttt{\string\faCloudSun}}\quad 晴转多云
+
+\faCloudSunRain\quad\makebox[5cm][l]{\texttt{\string\faCloudSunRain}}\quad 太阳雨
+
+\faCloudBolt\quad\makebox[5cm][l]{\texttt{\string\faCloudBolt}}\quad 雷电
+
+\faCloudRain\quad\makebox[5cm][l]{\texttt{\string\faCloudRain}}\quad 雨天
+
+\faCloudShowersHeavy\quad\makebox[5cm][l]{\texttt{\string\faCloudShowersHeavy}}\quad 暴雨
+
+\faSnowflake\quad\makebox[5cm][l]{\texttt{\string\faSnowflake}}\quad 雪
+
+\faWind\quad\makebox[5cm][l]{\texttt{\string\faWind}}\quad 大风
+
+\faCakeCandles\quad\makebox[5cm][l]{\texttt{\string\faCakeCandles}}\quad 生日蛋糕
+
+\faFaceSmile[regular]\quad\makebox[5cm][l]{\texttt{\string\faFaceSmile[regular]}}\quad 微笑
+
+\faFaceGrinWink\quad\makebox[5cm][l]{\texttt{\string\faFaceGrinWink}}\quad 眨眼笑
+
+\faFaceLaugh[regular]\quad\makebox[5cm][l]{\texttt{\string\faFaceLaugh[regular]}}\quad 大笑
+
+\faFaceGrinHearts\quad\makebox[5cm][l]{\texttt{\string\faFaceGrinHearts}}\quad 爱心眼
+
+\faFaceAngry[regular]\quad\makebox[5cm][l]{\texttt{\string\faFaceAngry[regular]}}\quad 生气
+
 \end{document}
-%=================================天气指令==========================================%
-% \sun 晴天太阳                  \sunny 晴朗                       \hot 炎热
-% \windy 大风		  			   \clouds 多云  					   \snow 雪 
-% \snowy 持续降雪  				 \snowyRainy 雨夹雪                \rainy 雨天 
-% \rainySunny 太阳雨             \rainyThunder 雷阵雨 			 \thunderLight 闪电（无雨）  
-% \hail 冰雹		               \dust 沙尘或雾霾
-%
-%=================================心情指令==========================================%
-% \confused 困惑			       \sad 悲伤（难过或沮丧）             \simpleSmile 简单微笑
-% \slightlySmile 淡淡微笑        \angry 生气                        \crying 哭泣（大哭或极度悲伤）
-% \dizzy 晕眩                    \rage 暴怒                         \winkSmile 眨眼笑
-% \stuckOutTongue 吐舌（调皮搞怪） \rollingEyes 翻白眼（无语或不耐烦） \confounded 苦恼
-% \expressionless 无表情         \heartEyes 爱心眼（喜爱或迷恋）      \laughing 开怀大笑
-% \nerdSmile 书呆子笑（呆萌或学霸） \openMouth 张嘴（惊讶或震惊）      \smirk 得意（狡猾或自满）
-% \worried 担忧（忧虑或紧张）      \astonished 震惊（极度惊讶或目瞪口呆）
