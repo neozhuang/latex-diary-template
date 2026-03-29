@@ -2,7 +2,7 @@
 
 [仓库地址](https://github.com/neozhuang/latex-diary-template)
 
-预览效果：
+[点击查看预览效果](diary.pdf)
 
 ---
 
@@ -78,6 +78,7 @@ latexmk:
 
 - Windows: `dir C:\Windows\Fonts`
 - Linux: `fc-list : family | sort | uniq`
+- Mac: `system_profiler SPFontsDataType | grep "Family:" | sed 's/.*Family: //' | sort | uniq`
 
 如何搭配选择好看的字体：[ChatGPT](https://chatgpt.com/)
 
